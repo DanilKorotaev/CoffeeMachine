@@ -18,6 +18,11 @@ std::shared_ptr<Recept> CoffeeMachine::GetRecept(std::string what)
     return (res != recepts.end() ? *res : nullptr);
 }
 
+void CoffeeMachine::GetCheck(std::ostream os)
+{
+    
+}
+
 bool CoffeeMachine::DepositeMoney(uint32_t money)
 {
     if(!coinAcceptor.HasChange(money))
@@ -104,14 +109,19 @@ void CoffeeMachine::GiveCoffee(std::string what)
                 }
             }
         }
-        auto price = std::find_if(products.begin(), products.end(), [&what](auto&el)
-              {
-                  return el.first == what;
-              })->first.GetPrice();
-        orders.back().Add(what,price);
+        AddToOrder(what);
     }
     else
         throw "Can't give coffee";
+}
+
+void CoffeeMachine::AddToOrder(std::string what)
+{
+    auto price = std::find_if(products.begin(), products.end(), [&what](auto&el)
+                              {
+                                  return el.first == what;
+                              })->first.GetPrice();
+    orders.back().Add(what,price);
 }
 
 void CoffeeMachine::GiveFood(std::string what)
@@ -122,6 +132,7 @@ void CoffeeMachine::GiveFood(std::string what)
              {
                  return el.first == what;
              })->second--;
+        AddToOrder(what);
     }
     else
         throw "Can't give food";
@@ -165,19 +176,57 @@ void CoffeeMachine::AddComponents(Recept::components_t components)
 
 std::vector<Product> CoffeeMachine::GetAssortmentOfCoffeeByDeposite()
 {
-    return {};
+    auto result = GetAssortmentOfCoffee();
+    auto it = result.begin();
+    while (it != result.end())
+    {
+        if (it->GetPrice() > deposite)
+            it = result.erase(it);
+        else
+            ++it;
+    }
+    return result;
 }
-std::vector<Product> CoffeeMachine::GetAssortmentOfFoodByDeposite()
+
+std::vector<Product> CoffeeMachine::GetAssortment()
 {
     return {};
+}
+
+std::vector<Product> GetAssortmentByDepisote()
+{
+  return {};
+}
+
+std::vector<Product> CoffeeMachine::GetAssortmentOfFoodByDeposite()
+{
+    std::vector<Product> result;
+    for(auto& prod: products)
+    {
+        if(prod.first.GetRecept() == nullptr && prod.first.GetPrice() < deposite)
+            result.push_back(prod.first);
+    }
+    return result;
 }
 std::vector<Product> CoffeeMachine::GetAssortmentOfCoffee()
 {
-    return {};
+    std::vector<Product> result;
+    for(auto& prod: products)
+    {
+        if(prod.first.GetRecept() != nullptr)
+            result.push_back(prod.first);
+    }
+    return result;
 }
 std::vector<Product> CoffeeMachine::GetAssortmentOfFood()
 {
-    return {};
+    std::vector<Product> result;
+    for(auto& prod: products)
+    {
+        if(prod.first.GetRecept() == nullptr)
+            result.push_back(prod.first);
+    }
+    return result;
 }
 
 CoffeeMachine::CoffeeMachine()

@@ -27,6 +27,7 @@ private:
     CoinAcceptor coinAcceptor;
     CurrencyAcceptor currencyAcceptor;
     std::vector<Order> orders;
+    void AddToOrder(std::string what);
     std::shared_ptr<Recept> GetRecept(std::string what);
     template<typename T>
     bool CanGet(std::string kind_of, T vector, Pred pred, uint16_t howMany = 1);
@@ -38,6 +39,7 @@ public:
                   CurrencyAcceptor currencyAcceptor);
     CoffeeMachine();
     bool DepositeMoney(uint32_t money);
+    void GetCheck(std::ostream os);
     void GiveCoffee(std::string kindOfCoffee);
     void GiveFood(std::string what);
     bool HasCoffee(std::string kindOfCoffee);
@@ -46,6 +48,8 @@ public:
     bool CanGetFood(std::string kindOfCoffee, uint16_t howMany = 1);
     void AddFood(Product product, uint32_t count);
     void AddComponents(Recept::components_t components);
+    std::vector<Product> GetAssortment();
+    std::vector<Product> GetAssortmentByDepisote();
     std::vector<Product> GetAssortmentOfCoffeeByDeposite();
     std::vector<Product> GetAssortmentOfFoodByDeposite();
     std::vector<Product> GetAssortmentOfCoffee();
