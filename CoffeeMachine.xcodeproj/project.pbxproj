@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A3C81E2322E3BF3000D61097 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E2222E3BF3000D61097 /* main.cpp */; };
+		A3C81E3522E3BFEC00D61097 /* CoinAcceptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E2A22E3BFEB00D61097 /* CoinAcceptor.cpp */; };
+		A3C81E3622E3BFEC00D61097 /* Product.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E2B22E3BFEC00D61097 /* Product.cpp */; };
+		A3C81E3722E3BFEC00D61097 /* Acceptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E2D22E3BFEC00D61097 /* Acceptor.cpp */; };
+		A3C81E3822E3BFEC00D61097 /* CurrencyAcceptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E2E22E3BFEC00D61097 /* CurrencyAcceptor.cpp */; };
+		A3C81E3922E3BFEC00D61097 /* CoffeeMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E2F22E3BFEC00D61097 /* CoffeeMachine.cpp */; };
+		A3C81E3A22E3BFEC00D61097 /* Recept.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E3422E3BFEC00D61097 /* Recept.cpp */; };
+		A3C81E3F22E4F96600D61097 /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E3D22E4F96500D61097 /* Order.cpp */; };
+		A3C81E4222E4FBD600D61097 /* IUnitMoney.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E4022E4FBD600D61097 /* IUnitMoney.cpp */; };
+		A3C81E4522E500CF00D61097 /* Dispay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E4322E500CF00D61097 /* Dispay.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3C81E1D22E3BF3000D61097 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A3C81E1F22E3BF3000D61097 /* CoffeeMachine */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CoffeeMachine; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C81E2222E3BF3000D61097 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A3C81E2922E3BFEB00D61097 /* CurrencyAcceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrencyAcceptor.h; sourceTree = "<group>"; };
+		A3C81E2A22E3BFEB00D61097 /* CoinAcceptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoinAcceptor.cpp; sourceTree = "<group>"; };
+		A3C81E2B22E3BFEC00D61097 /* Product.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Product.cpp; sourceTree = "<group>"; };
+		A3C81E2C22E3BFEC00D61097 /* Acceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acceptor.h; sourceTree = "<group>"; };
+		A3C81E2D22E3BFEC00D61097 /* Acceptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Acceptor.cpp; sourceTree = "<group>"; };
+		A3C81E2E22E3BFEC00D61097 /* CurrencyAcceptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CurrencyAcceptor.cpp; sourceTree = "<group>"; };
+		A3C81E2F22E3BFEC00D61097 /* CoffeeMachine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoffeeMachine.cpp; sourceTree = "<group>"; };
+		A3C81E3022E3BFEC00D61097 /* CoffeeMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoffeeMachine.h; sourceTree = "<group>"; };
+		A3C81E3122E3BFEC00D61097 /* Recept.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recept.h; sourceTree = "<group>"; };
+		A3C81E3222E3BFEC00D61097 /* CoinAcceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoinAcceptor.h; sourceTree = "<group>"; };
+		A3C81E3322E3BFEC00D61097 /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
+		A3C81E3422E3BFEC00D61097 /* Recept.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Recept.cpp; sourceTree = "<group>"; };
+		A3C81E3D22E4F96500D61097 /* Order.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Order.cpp; sourceTree = "<group>"; };
+		A3C81E3E22E4F96500D61097 /* Order.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Order.h; sourceTree = "<group>"; };
+		A3C81E4022E4FBD600D61097 /* IUnitMoney.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IUnitMoney.cpp; sourceTree = "<group>"; };
+		A3C81E4122E4FBD600D61097 /* IUnitMoney.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUnitMoney.h; sourceTree = "<group>"; };
+		A3C81E4322E500CF00D61097 /* Dispay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dispay.cpp; sourceTree = "<group>"; };
+		A3C81E4422E500CF00D61097 /* Dispay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dispay.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A3C81E1C22E3BF3000D61097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A3C81E1622E3BF3000D61097 = {
+			isa = PBXGroup;
+			children = (
+				A3C81E2122E3BF3000D61097 /* CoffeeMachine */,
+				A3C81E2022E3BF3000D61097 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A3C81E2022E3BF3000D61097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3C81E1F22E3BF3000D61097 /* CoffeeMachine */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A3C81E2122E3BF3000D61097 /* CoffeeMachine */ = {
+			isa = PBXGroup;
+			children = (
+				A3C81E2D22E3BFEC00D61097 /* Acceptor.cpp */,
+				A3C81E2C22E3BFEC00D61097 /* Acceptor.h */,
+				A3C81E2F22E3BFEC00D61097 /* CoffeeMachine.cpp */,
+				A3C81E3022E3BFEC00D61097 /* CoffeeMachine.h */,
+				A3C81E2A22E3BFEB00D61097 /* CoinAcceptor.cpp */,
+				A3C81E3222E3BFEC00D61097 /* CoinAcceptor.h */,
+				A3C81E2E22E3BFEC00D61097 /* CurrencyAcceptor.cpp */,
+				A3C81E2922E3BFEB00D61097 /* CurrencyAcceptor.h */,
+				A3C81E2B22E3BFEC00D61097 /* Product.cpp */,
+				A3C81E3322E3BFEC00D61097 /* Product.h */,
+				A3C81E3422E3BFEC00D61097 /* Recept.cpp */,
+				A3C81E3122E3BFEC00D61097 /* Recept.h */,
+				A3C81E2222E3BF3000D61097 /* main.cpp */,
+				A3C81E3D22E4F96500D61097 /* Order.cpp */,
+				A3C81E3E22E4F96500D61097 /* Order.h */,
+				A3C81E4022E4FBD600D61097 /* IUnitMoney.cpp */,
+				A3C81E4122E4FBD600D61097 /* IUnitMoney.h */,
+				A3C81E4322E500CF00D61097 /* Dispay.cpp */,
+				A3C81E4422E500CF00D61097 /* Dispay.h */,
+			);
+			path = CoffeeMachine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A3C81E1E22E3BF3000D61097 /* CoffeeMachine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A3C81E2622E3BF3000D61097 /* Build configuration list for PBXNativeTarget "CoffeeMachine" */;
+			buildPhases = (
+				A3C81E1B22E3BF3000D61097 /* Sources */,
+				A3C81E1C22E3BF3000D61097 /* Frameworks */,
+				A3C81E1D22E3BF3000D61097 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoffeeMachine;
+			productName = CoffeeMachine;
+			productReference = A3C81E1F22E3BF3000D61097 /* CoffeeMachine */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A3C81E1722E3BF3000D61097 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Данил Коротаев";
+				TargetAttributes = {
+					A3C81E1E22E3BF3000D61097 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = A3C81E1A22E3BF3000D61097 /* Build configuration list for PBXProject "CoffeeMachine" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A3C81E1622E3BF3000D61097;
+			productRefGroup = A3C81E2022E3BF3000D61097 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3C81E1E22E3BF3000D61097 /* CoffeeMachine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A3C81E1B22E3BF3000D61097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A3C81E2322E3BF3000D61097 /* main.cpp in Sources */,
+				A3C81E4522E500CF00D61097 /* Dispay.cpp in Sources */,
+				A3C81E4222E4FBD600D61097 /* IUnitMoney.cpp in Sources */,
+				A3C81E3922E3BFEC00D61097 /* CoffeeMachine.cpp in Sources */,
+				A3C81E3622E3BFEC00D61097 /* Product.cpp in Sources */,
+				A3C81E3722E3BFEC00D61097 /* Acceptor.cpp in Sources */,
+				A3C81E3822E3BFEC00D61097 /* CurrencyAcceptor.cpp in Sources */,
+				A3C81E3522E3BFEC00D61097 /* CoinAcceptor.cpp in Sources */,
+				A3C81E3F22E4F96600D61097 /* Order.cpp in Sources */,
+				A3C81E3A22E3BFEC00D61097 /* Recept.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A3C81E2422E3BF3000D61097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A3C81E2522E3BF3000D61097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A3C81E2722E3BF3000D61097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A3C81E2822E3BF3000D61097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A3C81E1A22E3BF3000D61097 /* Build configuration list for PBXProject "CoffeeMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3C81E2422E3BF3000D61097 /* Debug */,
+				A3C81E2522E3BF3000D61097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A3C81E2622E3BF3000D61097 /* Build configuration list for PBXNativeTarget "CoffeeMachine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3C81E2722E3BF3000D61097 /* Debug */,
+				A3C81E2822E3BF3000D61097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A3C81E1722E3BF3000D61097 /* Project object */;
+}
