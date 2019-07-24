@@ -23,6 +23,7 @@ bool CoffeeMachine::DepositeMoney(uint32_t money)
     if(!coinAcceptor.HasChange(money))
         return false;
     deposite = money;
+    orders.push_back(Order{});
     return true;
 }
 
@@ -103,7 +104,11 @@ void CoffeeMachine::GiveCoffee(std::string what)
                 }
             }
         }
-        
+        auto price = std::find_if(products.begin(), products.end(), [&what](auto&el)
+              {
+                  return el.first == what;
+              })->first.GetPrice();
+        orders.back().Add(what,price);
     }
     else
         throw "Can't give coffee";
@@ -124,7 +129,38 @@ void CoffeeMachine::GiveFood(std::string what)
 
 void CoffeeMachine::AddFood(Product product, uint32_t count)
 {
+    auto iter = std::find_if(products.begin(),products.end(),[&product](auto& el)
+                             {
+                                 return el.first == product;
+                             });
+    if(iter == products.end())
+    {
+        products.push_back({product, count});
+    }
+    else
+    {
+        iter->second+=count;
+    }
     
+}
+
+void CoffeeMachine::AddComponents(Recept::components_t components)
+{
+    for(auto&comp:this->components)
+    {
+        for (auto i = components.size()-1; i !=0; i--)
+        {
+          if(comp.first->GetName() == components[i].first->GetName())
+          {
+              comp.second += components[i].second;
+              components.erase(components.begin()+i);
+          }
+        }
+    }
+    for(auto&comp:components)
+    {
+        this->components.push_back({comp.first,comp.second});
+    }
 }
 
 std::vector<Product> CoffeeMachine::GetAssortmentOfCoffeeByDeposite()

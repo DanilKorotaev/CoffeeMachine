@@ -9,6 +9,7 @@
 #include "CoinAcceptor.h"
 #include "CurrencyAcceptor.h"
 #include "Recept.h"
+#include "Order.h"
 #include <algorithm>
 
 class CoffeeMachine;
@@ -25,6 +26,7 @@ private:
     uint32_t deposite;
     CoinAcceptor coinAcceptor;
     CurrencyAcceptor currencyAcceptor;
+    std::vector<Order> orders;
     std::shared_ptr<Recept> GetRecept(std::string what);
     template<typename T>
     bool CanGet(std::string kind_of, T vector, Pred pred, uint16_t howMany = 1);
@@ -43,6 +45,7 @@ public:
     bool CanGetCoffee(std::string kindOfCoffee, uint16_t howMany = 1);
     bool CanGetFood(std::string kindOfCoffee, uint16_t howMany = 1);
     void AddFood(Product product, uint32_t count);
+    void AddComponents(Recept::components_t components);
     std::vector<Product> GetAssortmentOfCoffeeByDeposite();
     std::vector<Product> GetAssortmentOfFoodByDeposite();
     std::vector<Product> GetAssortmentOfCoffee();
