@@ -30,6 +30,7 @@ private:
     CurrencyAcceptor currencyAcceptor;
     std::vector<Order> orders;
     void AddToOrder(std::string what);
+    void AddToOrder(std::shared_ptr<Product> what);
     std::shared_ptr<Recept> GetRecept(std::string what);
     template<typename T>
     bool CanGet(std::string kind_of, T vector, Pred pred, uint16_t howMany = 1);
@@ -46,8 +47,8 @@ public:
     void GiveFood(std::string what);
     bool HasCoffee(std::string kindOfCoffee);
     bool HasFood(std::string kindofFood);
-    bool CanGetCoffee(std::string kindOfCoffee, uint16_t howMany = 1);
-    bool CanGetFood(std::string kindOfCoffee, uint16_t howMany = 1);
+    bool CanGetCoffee(std::string what);
+    bool CanGetFood(std::string kindOfCoffee);
     void AddFood(Product product, uint32_t count);
     void AddComponents(Recept::components_t components);
     std::vector<Product> GetAssortment();

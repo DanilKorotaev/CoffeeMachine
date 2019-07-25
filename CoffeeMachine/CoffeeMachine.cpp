@@ -79,18 +79,37 @@ bool CoffeeMachine::CanGet(std::string kind_of, T vector, Pred pred, uint16_t ho
         return false;
 }
 
-bool CoffeeMachine::CanGetCoffee(std::string kindOfCoffee, uint16_t howMany)
+bool CoffeeMachine::CanGetCoffee(std::string what)
 {
-    if(CanGet(kindOfCoffee,products,&CoffeeMachine::HasCoffee,howMany))
-     return true;
-    else return false;
+    if(coinAcceptor.HasChange(deposite) && HasCoffee(what))
+    {
+        if((std::find_if(coffee.begin(), coffee.end(), [&what](auto&el){
+            return el.GetName() == what;
+        }))->GetPrice() <= deposite)
+            return true;
+        else
+            return false;
+    }
+    else
+        return false;
 }
 
-bool CoffeeMachine::CanGetFood(std::string kindOfCoffee, uint16_t howMany)
+bool CoffeeMachine::CanGetFood(std::string what)
 {
-    if(CanGet(kindOfCoffee,products,&::CoffeeMachine::HasFood,howMany))
-        return true;
-    else return false;
+    if(coinAcceptor.HasChange(deposite))
+        if(HasFood(what))
+        {
+            if((std::find_if(products.begin(), products.end(), [&what](auto&el){
+                return el.first.GetName() == what;
+            }))->second > 0)
+                return true;
+            else
+                return false;
+        }
+        else
+            return  false;
+    else
+        return false;
 }
 
 void CoffeeMachine::GiveCoffee(std::string what)
@@ -124,15 +143,21 @@ void CoffeeMachine::AddToOrder(std::string what)
     orders.back().Add(what,price);
 }
 
+void CoffeeMachine::AddToOrder(std::shared_ptr<Product> what)
+{
+    orders.back().Add(what->GetName(),what->GetPrice());
+}
+
 void CoffeeMachine::GiveFood(std::string what)
 {
     if(CanGetFood(what))
     {
-        std::find_if(products.begin(), products.end(), [&what](auto&el)
+        auto it = std::find_if(products.begin(), products.end(), [&what](auto&el)
              {
                  return el.first == what;
-             })->second--;
-        AddToOrder(what);
+             });
+        it->second--;
+        AddToOrder(std::make_shared<decltype(it->first)>(it->first));
     }
     else
         throw "Can't give food";
