@@ -17,6 +17,7 @@
 		A3C81E3F22E4F96600D61097 /* Order.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E3D22E4F96500D61097 /* Order.cpp */; };
 		A3C81E4222E4FBD600D61097 /* IUnitMoney.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E4022E4FBD600D61097 /* IUnitMoney.cpp */; };
 		A3C81E4522E500CF00D61097 /* Dispay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E4322E500CF00D61097 /* Dispay.cpp */; };
+		A3C81E4822E9A94700D61097 /* Coffee.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A3C81E4622E9A94700D61097 /* Coffee.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,8 @@
 		A3C81E4122E4FBD600D61097 /* IUnitMoney.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUnitMoney.h; sourceTree = "<group>"; };
 		A3C81E4322E500CF00D61097 /* Dispay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Dispay.cpp; sourceTree = "<group>"; };
 		A3C81E4422E500CF00D61097 /* Dispay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dispay.h; sourceTree = "<group>"; };
+		A3C81E4622E9A94700D61097 /* Coffee.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Coffee.cpp; sourceTree = "<group>"; };
+		A3C81E4722E9A94700D61097 /* Coffee.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Coffee.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 				A3C81E2E22E3BFEC00D61097 /* CurrencyAcceptor.cpp */,
 				A3C81E2922E3BFEB00D61097 /* CurrencyAcceptor.h */,
 				A3C81E2B22E3BFEC00D61097 /* Product.cpp */,
+				A3C81E4622E9A94700D61097 /* Coffee.cpp */,
+				A3C81E4722E9A94700D61097 /* Coffee.h */,
 				A3C81E3322E3BFEC00D61097 /* Product.h */,
 				A3C81E3422E3BFEC00D61097 /* Recept.cpp */,
 				A3C81E3122E3BFEC00D61097 /* Recept.h */,
@@ -163,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C81E4822E9A94700D61097 /* Coffee.cpp in Sources */,
 				A3C81E2322E3BF3000D61097 /* main.cpp in Sources */,
 				A3C81E4522E500CF00D61097 /* Dispay.cpp in Sources */,
 				A3C81E4222E4FBD600D61097 /* IUnitMoney.cpp in Sources */,

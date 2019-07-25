@@ -15,12 +15,12 @@ Product::Product(std::string name):name{name}
     
 }
 
-Product::Product(uint16_t price, std::string name, std::shared_ptr<Recept> recept):price{price},name{name},recept{recept}
-{
-    
-}
-
 bool operator==(const Product& lrh,const Product& rlh)
 {
     return lrh.GetName() == rlh.GetName();
+}
+
+bool Product::operator<(const Product& obj)
+{
+    return this->GetName() < obj.GetName();
 }

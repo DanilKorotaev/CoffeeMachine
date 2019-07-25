@@ -203,7 +203,7 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfFoodByDeposite()
     std::vector<Product> result;
     for(auto& prod: products)
     {
-        if(prod.first.GetRecept() == nullptr && prod.first.GetPrice() < deposite)
+       // if(prod.first.GetRecept() == nullptr && prod.first.GetPrice() < deposite)
             result.push_back(prod.first);
     }
     return result;
@@ -213,7 +213,7 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfCoffee()
     std::vector<Product> result;
     for(auto& prod: products)
     {
-        if(prod.first.GetRecept() != nullptr)
+      //  if(prod.first.GetRecept() != nullptr)
             result.push_back(prod.first);
     }
     return result;
@@ -223,7 +223,7 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfFood()
     std::vector<Product> result;
     for(auto& prod: products)
     {
-        if(prod.first.GetRecept() == nullptr)
+       // if(prod.first.GetRecept() == nullptr)
             result.push_back(prod.first);
     }
     return result;
