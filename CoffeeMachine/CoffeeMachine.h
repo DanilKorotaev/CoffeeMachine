@@ -17,10 +17,12 @@ class CoffeeMachine;
 
 typedef  bool (CoffeeMachine::*Pred)(std::string);
 
+using Products_t = std::vector<std::pair<Product,uint32_t>>;
+
 class CoffeeMachine
 {
 private:
-    using Products_t = std::vector<std::pair<Product,uint32_t>>;
+   // using Products_t = std::vector<std::pair<Product,uint32_t>>;
     std::vector<std::shared_ptr<Recept>> recepts;
     std::vector<Coffee> coffee;
     Products_t products;
@@ -32,11 +34,10 @@ private:
     void AddToOrder(std::string what);
     void AddToOrder(std::shared_ptr<Product> what);
     std::shared_ptr<Recept> GetRecept(std::string what);
-    template<typename T>
-    bool CanGet(std::string kind_of, T vector, Pred pred, uint16_t howMany = 1);
 public:
     CoffeeMachine(std::vector<std::shared_ptr<Recept>> recepts,
                   Products_t products,
+                  std::vector<Coffee> coffee,
                   Recept::components_t components,
                   CoinAcceptor coinAcceptor,
                   CurrencyAcceptor currencyAcceptor);

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoffeeMachine/Acceptor.h"
-            timestampString = "585593714.774226"
+            timestampString = "585833226.8472461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "Acceptor"
             landmarkType = "3">
          </BreakpointContent>
@@ -26,11 +26,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoffeeMachine/CoffeeMachine.h"
-            timestampString = "585593714.77435"
+            timestampString = "585833226.847472"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "CoffeeMachine(std::vector&lt;std::shared_ptr&lt;Recept&gt;&gt; recepts, Products_t products, std::vector&lt;Coffee&gt; coffee, Recept::components_t components, CoinAcceptor coinAcceptor, CurrencyAcceptor currencyAcceptor)"
+            landmarkType = "6">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CoffeeMachine/CoffeeMachine.h"
+            timestampString = "585833226.847592"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "CoffeeMachine"
             landmarkType = "3">
          </BreakpointContent>
@@ -42,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoffeeMachine/CoffeeMachine.h"
-            timestampString = "585593714.774419"
+            timestampString = "585833226.847664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "CoffeeMachine"
             landmarkType = "3">
          </BreakpointContent>
@@ -54,15 +70,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoffeeMachine/CoffeeMachine.h"
-            timestampString = "585695468.192358"
+            timestampString = "585833226.847735"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "CoffeeMachine"
             landmarkType = "3">
          </BreakpointContent>

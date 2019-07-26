@@ -2,9 +2,10 @@
 
 CoffeeMachine::CoffeeMachine(std::vector<std::shared_ptr<Recept>> recepts,
          Products_t products,
+         std::vector<Coffee> coffee,
          Recept::components_t components,
          CoinAcceptor coinAcceptor, CurrencyAcceptor currencyAcceptor):
-products{products}, components{components},coinAcceptor{coinAcceptor},currencyAcceptor{currencyAcceptor},recepts{recepts}
+products{products}, coffee{coffee}, components{components},coinAcceptor{coinAcceptor},currencyAcceptor{currencyAcceptor},recepts{recepts}
 {
     
 }
@@ -58,25 +59,6 @@ bool CoffeeMachine::HasFood(std::string kindofFood)
             return true;
     }
     return false;
-}
-
-template<typename T>
-bool CoffeeMachine::CanGet(std::string kind_of, T vector, Pred pred, uint16_t howMany)
-{
-    if(coinAcceptor.HasChange(deposite))
-        if((this->*pred)(kind_of))
-        {
-            if((std::find_if(vector.begin(), vector.end(), [&kind_of](auto&el){
-                return el.first.GetName() == kind_of;
-            }))->second >= howMany)
-                return true;
-            else
-                return false;
-        }
-        else
-            return  false;
-    else
-        return false;
 }
 
 bool CoffeeMachine::CanGetCoffee(std::string what)
@@ -193,10 +175,7 @@ void CoffeeMachine::AddComponents(Recept::components_t components)
           }
         }
     }
-    for(auto&comp:components)
-    {
-        this->components.push_back({comp.first,comp.second});
-    }
+    std::copy(components.begin(),components.end(),std::back_inserter(this->components));
 }
 
 std::vector<Product> CoffeeMachine::GetAssortmentOfCoffeeByDeposite()
@@ -215,12 +194,18 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfCoffeeByDeposite()
 
 std::vector<Product> CoffeeMachine::GetAssortment()
 {
-    return {};
+    auto food = GetAssortmentOfFood();
+    auto coffee = GetAssortmentOfCoffee();
+    food.insert(food.end(), coffee.begin(), coffee.end());
+    return food;
 }
 
-std::vector<Product> GetAssortmentByDepisote()
+std::vector<Product> CoffeeMachine::GetAssortmentByDepisote()
 {
-  return {};
+    auto food = GetAssortmentOfFoodByDeposite();
+    auto coffee = GetAssortmentOfCoffeeByDeposite();
+    food.insert(food.end(), coffee.begin(), coffee.end());
+    return food;
 }
 
 std::vector<Product> CoffeeMachine::GetAssortmentOfFoodByDeposite()
@@ -228,7 +213,7 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfFoodByDeposite()
     std::vector<Product> result;
     for(auto& prod: products)
     {
-       // if(prod.first.GetRecept() == nullptr && prod.first.GetPrice() < deposite)
+        if(prod.first.GetPrice() < deposite)
             result.push_back(prod.first);
     }
     return result;
@@ -236,11 +221,7 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfFoodByDeposite()
 std::vector<Product> CoffeeMachine::GetAssortmentOfCoffee()
 {
     std::vector<Product> result;
-    for(auto& prod: products)
-    {
-      //  if(prod.first.GetRecept() != nullptr)
-            result.push_back(prod.first);
-    }
+    std::copy(coffee.begin(),coffee.end(),std::back_inserter(result));
     return result;
 }
 std::vector<Product> CoffeeMachine::GetAssortmentOfFood()
@@ -248,8 +229,7 @@ std::vector<Product> CoffeeMachine::GetAssortmentOfFood()
     std::vector<Product> result;
     for(auto& prod: products)
     {
-       // if(prod.first.GetRecept() == nullptr)
-            result.push_back(prod.first);
+        result.push_back(prod.first);
     }
     return result;
 }
