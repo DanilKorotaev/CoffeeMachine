@@ -37,7 +37,8 @@ int main()
         Coffee{"4",1,recepts[3]}
     };
     
-    auto coffeeMachine {CoffeeMachine(recepts, products, coffee, components, CoinAcceptor{}, CurrencyAcceptor{})};
+    auto coffeeMachine {CoffeeMachine(//recepts,
+                                      products, coffee, components, CoinAcceptor{}, CurrencyAcceptor{})};
     
     std::cout << coffeeMachine.CanGetCoffee("1") << std::endl;
     std::cout << coffeeMachine.CanGetFood("1") << std::endl;

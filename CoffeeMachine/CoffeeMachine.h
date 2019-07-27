@@ -23,7 +23,7 @@ class CoffeeMachine
 {
 private:
    // using Products_t = std::vector<std::pair<Product,uint32_t>>;
-    std::vector<std::shared_ptr<Recept>> recepts;
+   // std::vector<std::shared_ptr<Recept>> recepts;
     std::vector<Coffee> coffee;
     Products_t products;
     Recept::components_t components;
@@ -33,9 +33,9 @@ private:
     std::vector<Order> orders;
     void AddToOrder(std::string what);
     void AddToOrder(std::shared_ptr<Product> what);
-    std::shared_ptr<Recept> GetRecept(std::string what);
+    //std::shared_ptr<Recept> GetRecept(std::string what);
 public:
-    CoffeeMachine(std::vector<std::shared_ptr<Recept>> recepts,
+    CoffeeMachine(//std::vector<std::shared_ptr<Recept>> recepts,
                   Products_t products,
                   std::vector<Coffee> coffee,
                   Recept::components_t components,

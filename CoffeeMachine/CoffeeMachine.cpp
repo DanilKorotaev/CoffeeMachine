@@ -1,23 +1,23 @@
 #include "CoffeeMachine.h"
 
-CoffeeMachine::CoffeeMachine(std::vector<std::shared_ptr<Recept>> recepts,
+CoffeeMachine::CoffeeMachine(//std::vector<std::shared_ptr<Recept>> recepts,
          Products_t products,
          std::vector<Coffee> coffee,
          Recept::components_t components,
          CoinAcceptor coinAcceptor, CurrencyAcceptor currencyAcceptor):
-products{products}, coffee{coffee}, components{components},coinAcceptor{coinAcceptor},currencyAcceptor{currencyAcceptor},recepts{recepts}
+products{products}, coffee{coffee}, components{components},coinAcceptor{coinAcceptor},currencyAcceptor{currencyAcceptor}//,recepts{recepts}
 {
     
 }
 
-std::shared_ptr<Recept> CoffeeMachine::GetRecept(std::string what)
-{
-    auto res = std::find_if(recepts.begin(),recepts.end(),[what](const auto& el){
-        return el->GetName() == what;
-    });
-    
-    return (res != recepts.end() ? *res : nullptr);
-}
+//std::shared_ptr<Recept> CoffeeMachine::GetRecept(std::string what)
+//{
+//    auto res = std::find_if(recepts.begin(),recepts.end(),[what](const auto& el){
+//        return el->GetName() == what;
+//    });
+//
+//    return (res != recepts.end() ? *res : nullptr);
+//}
 
 void CoffeeMachine::GetCheck(std::ostream os)
 {
@@ -35,19 +35,19 @@ bool CoffeeMachine::DepositeMoney(uint32_t money)
 
 bool CoffeeMachine::HasCoffee(std::string kindOfCoffee)
 {
-    if (auto recept = GetRecept(kindOfCoffee); recept != nullptr)
-    {
-        auto comps = (recept)->GetComponets();
-        for(auto&comp:comps)
-        {
-            for(auto&el:components)
-            {
-                if(comp.first == el.first && comp.second < el.second)
-                    return false;
-            }
-        }
-        return true;
-    }
+//   if (auto recept = GetRecept(kindOfCoffee); recept != nullptr)
+//    {
+//        auto comps = (recept)->GetComponets();
+//        for(auto&comp:comps)
+//        {
+//            for(auto&el:components)
+//            {
+//                if(comp.first == el.first && comp.second < el.second)
+//                    return false;
+//            }
+//        }
+//        return true;
+//    }
     return false;
 }
                               
@@ -98,18 +98,18 @@ void CoffeeMachine::GiveCoffee(std::string what)
 {
     if(CanGetCoffee(what))
     {
-        auto recept = GetRecept(what);
-        for(auto& comp:recept->GetComponets())
-        {
-            for(auto&component:components)
-            {
-                if(comp.first->GetName() == component.first->GetName())
-                {
-                    component.second -= comp.second;
-                    break;
-                }
-            }
-        }
+//        auto recept = GetRecept(what);
+//        for(auto& comp:recept->GetComponets())
+//        {
+//            for(auto&component:components)
+//            {
+//                if(comp.first->GetName() == component.first->GetName())
+//                {
+//                    component.second -= comp.second;
+//                    break;
+//                }
+//            }
+//        }
         AddToOrder(what);
     }
     else
