@@ -13,9 +13,9 @@
 #include "Coffee.h"
 #include <algorithm>
 
-class CoffeeMachine;
+//class CoffeeMachine;
 
-typedef  bool (CoffeeMachine::*Pred)(std::string);
+//typedef  bool (CoffeeMachine::*Pred)(std::string);
 
 using Products_t = std::vector<std::pair<Product,uint32_t>>;
 
@@ -31,12 +31,11 @@ private:
     CoinAcceptor coinAcceptor;
     CurrencyAcceptor currencyAcceptor;
     std::vector<Order> orders;
-    void AddToOrder(std::string what);
+    [[deprecated]]void AddToOrder(std::string what);
     void AddToOrder(std::shared_ptr<Product> what);
-    //std::shared_ptr<Recept> GetRecept(std::string what);
+    std::shared_ptr<Recept> GetRecept(std::string what);
 public:
-    CoffeeMachine(//std::vector<std::shared_ptr<Recept>> recepts,
-                  Products_t products,
+    CoffeeMachine(Products_t products,
                   std::vector<Coffee> coffee,
                   Recept::components_t components,
                   CoinAcceptor coinAcceptor,
@@ -44,12 +43,12 @@ public:
     CoffeeMachine();
     bool DepositeMoney(uint32_t money);
     void GetCheck(std::ostream os);
-    void GiveCoffee(std::string kindOfCoffee);
+    void GiveCoffee(std::string what);
     void GiveFood(std::string what);
-    bool HasCoffee(std::string kindOfCoffee);
-    bool HasFood(std::string kindofFood);
+    bool HasCoffee(std::string what);
+    bool HasFood(std::string what);
     bool CanGetCoffee(std::string what);
-    bool CanGetFood(std::string kindOfCoffee);
+    bool CanGetFood(std::string what);
     void AddFood(Product product, uint32_t count);
     void AddComponents(Recept::components_t components);
     std::vector<Product> GetAssortment();

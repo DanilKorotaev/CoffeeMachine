@@ -10,14 +10,12 @@ products{products}, coffee{coffee}, components{components},coinAcceptor{coinAcce
     
 }
 
-//std::shared_ptr<Recept> CoffeeMachine::GetRecept(std::string what)
-//{
-//    auto res = std::find_if(recepts.begin(),recepts.end(),[what](const auto& el){
-//        return el->GetName() == what;
-//    });
-//
-//    return (res != recepts.end() ? *res : nullptr);
-//}
+std::shared_ptr<Recept> CoffeeMachine::GetRecept(std::string what)
+{
+    return std::find_if(coffee.begin(), coffee.end(), [&what](auto&el){
+        return el.GetName() == what;
+    })->GetRecept();
+}
 
 void CoffeeMachine::GetCheck(std::ostream os)
 {
@@ -33,29 +31,31 @@ bool CoffeeMachine::DepositeMoney(uint32_t money)
     return true;
 }
 
-bool CoffeeMachine::HasCoffee(std::string kindOfCoffee)
+bool CoffeeMachine::HasCoffee(std::string what)
 {
-//   if (auto recept = GetRecept(kindOfCoffee); recept != nullptr)
-//    {
-//        auto comps = (recept)->GetComponets();
-//        for(auto&comp:comps)
-//        {
-//            for(auto&el:components)
-//            {
-//                if(comp.first == el.first && comp.second < el.second)
-//                    return false;
-//            }
-//        }
-//        return true;
-//    }
-    return false;
+    auto recept = GetRecept(what);
+    auto comps = recept->GetComponets();
+    for(auto&comp:comps)
+    {
+        bool has = false;
+        for(auto&el:components)
+        {
+            if((comp.first == el.first?(has = true):false) && comp.second < el.second)
+                return false;
+        }
+        if (!has)
+        {
+            return false;
+        }
+    }
+    return true;
 }
                               
-bool CoffeeMachine::HasFood(std::string kindofFood)
+bool CoffeeMachine::HasFood(std::string what)
 {
     for(auto& prod: products)
     {
-        if (prod.first.GetName() == kindofFood && prod.second > 0)
+        if (prod.first.GetName() == what && prod.second > 0)
             return true;
     }
     return false;
@@ -98,6 +98,8 @@ void CoffeeMachine::GiveCoffee(std::string what)
 {
     if(CanGetCoffee(what))
     {
+        
+        
 //        auto recept = GetRecept(what);
 //        for(auto& comp:recept->GetComponets())
 //        {
