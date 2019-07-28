@@ -98,20 +98,18 @@ void CoffeeMachine::GiveCoffee(std::string what)
 {
     if(CanGetCoffee(what))
     {
-        
-        
-//        auto recept = GetRecept(what);
-//        for(auto& comp:recept->GetComponets())
-//        {
-//            for(auto&component:components)
-//            {
-//                if(comp.first->GetName() == component.first->GetName())
-//                {
-//                    component.second -= comp.second;
-//                    break;
-//                }
-//            }
-//        }
+        auto recept = GetRecept(what);
+        for(auto& comp:recept->GetComponets())
+        {
+            for(auto&component:components)
+            {
+                if(comp.first->GetName() == component.first->GetName())
+                {
+                    component.second -= comp.second;
+                    break;
+                }
+            }
+        }
         AddToOrder(what);
     }
     else
