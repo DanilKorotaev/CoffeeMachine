@@ -40,7 +40,7 @@ bool CoffeeMachine::HasCoffee(std::string what)
         bool has = false;
         for(auto&el:components)
         {
-            if((comp.first == el.first?(has = true):false) && comp.second < el.second)
+            if((comp.first == el.first?(has = true):false) && comp.second > el.second)
                 return false;
         }
         if (!has)

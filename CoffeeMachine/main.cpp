@@ -43,6 +43,9 @@ int main()
     
     std::cout << coffeeMachine.CanGetCoffee("esspresso") << std::endl;
     std::cout << coffeeMachine.CanGetFood("mars") << std::endl;
+    
+    coffeeMachine.GiveCoffee("esspresso");
+        std::cout << coffeeMachine.CanGetCoffee("esspresso") << std::endl;
     for(auto& kek: coffeeMachine.GetAssortment())
     {
         std::cout << kek.GetName() << " " << kek.GetPrice() << std::endl;
