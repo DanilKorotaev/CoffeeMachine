@@ -13,17 +13,11 @@
 #include "Coffee.h"
 #include <algorithm>
 
-//class CoffeeMachine;
-
-//typedef  bool (CoffeeMachine::*Pred)(std::string);
-
 using Products_t = std::vector<std::pair<Product,uint32_t>>;
 
 class CoffeeMachine
 {
 private:
-   // using Products_t = std::vector<std::pair<Product,uint32_t>>;
-   // std::vector<std::shared_ptr<Recept>> recepts;
     std::vector<Coffee> coffee;
     Products_t products;
     Recept::components_t components;

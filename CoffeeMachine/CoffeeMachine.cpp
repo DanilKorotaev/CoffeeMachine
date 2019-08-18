@@ -1,11 +1,10 @@
 #include "CoffeeMachine.h"
 
-CoffeeMachine::CoffeeMachine(//std::vector<std::shared_ptr<Recept>> recepts,
-         Products_t products,
-         std::vector<Coffee> coffee,
-         Recept::components_t components,
-         CoinAcceptor coinAcceptor, CurrencyAcceptor currencyAcceptor):
-products{products}, coffee{coffee}, components{components},coinAcceptor{coinAcceptor},currencyAcceptor{currencyAcceptor}//,recepts{recepts}
+CoffeeMachine::CoffeeMachine(Products_t products,
+     std::vector<Coffee> coffee,
+     Recept::components_t components,
+     CoinAcceptor coinAcceptor, CurrencyAcceptor currencyAcceptor):
+    products{products}, coffee{coffee}, components{components},coinAcceptor{coinAcceptor},currencyAcceptor{currencyAcceptor}
 {
     
 }

@@ -8,7 +8,7 @@
 
 class Acceptor
 {
-    typedef std::vector<std::pair<IUnitMoney,uint32_t>> units_money_t;
+    typedef std::vector<std::pair<uint32_t,uint32_t>> units_money_t;
 protected:
     units_money_t units_money;
     std::set<uint16_t> kind_money;

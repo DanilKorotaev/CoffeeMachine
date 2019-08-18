@@ -7,7 +7,7 @@ CoinAcceptor::CoinAcceptor()
 
 bool CoinAcceptor::HasChange(uint32_t count)
 {
-    
+    units_money
     return true;
 }
 
@@ -21,7 +21,8 @@ bool CoinAcceptor::GiveMoney(size_t count)
     return true;
 }
 
-bool CoinAcceptor::TakeMoney(IUnitMoney unit)
+bool CoinAcceptor::TakeMoney(KindOfMoney unit)
 {
+    units_money[unit]++;
     return true;
 }
